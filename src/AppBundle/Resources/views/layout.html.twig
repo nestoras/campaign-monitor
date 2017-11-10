@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="{{ asset('bundles/app/css/custom.css') }}" rel="stylesheet">
+</head>
+<body>
+{% include 'AppBundle::topbar.html.twig' %}
+<div class="container-fluid">
+    {% block column_center %} {% endblock %}
+</div>
+
+<!-- jquery & Bootstrap JS -->
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src={{ asset('bundles/fosjsrouting/js/router.js') }}></script>
+<script src={{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}></script>
+<script src="{{ asset('bundles/app/js/subscriber-list.js') }}"></script>
+</body>
+</html>

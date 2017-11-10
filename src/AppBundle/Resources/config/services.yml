@@ -1,0 +1,16 @@
+parameters:
+    campaign.monitor.subscriber.class: AppBundle\Subscriber\CampaignMonitorSubscriber
+    campaign.monitor.service.class: AppBundle\Services\CampaignMonitorService
+
+services:
+    campaign.monitor.subscriber:
+        class: "%campaign.monitor.subscriber.class%"
+        arguments:
+            - "%api_key%"
+            - "%list_id%"
+
+    campaign.monitor.service:
+        class: "%campaign.monitor.service.class%"
+        arguments:
+            - "@campaign.monitor.subscriber"
+            - "@translator.default"

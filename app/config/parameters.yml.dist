@@ -1,0 +1,5 @@
+parameters:
+    secret: ThisTokenIsNotSoSecretChangeIt
+    api_key: 73acbb8bdbc7b1846ce79a9d1d168169
+    list_id: 313a69b5692d9ca738a9947bdfe72e95
+    locale: en

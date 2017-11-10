@@ -1,0 +1,14 @@
+{% extends 'AppBundle::layout.html.twig' %}
+{% block column_center %}
+    <div class="col-md-12">
+        <div class="pull-right">
+            <a href="{{ path('app_create') }}" class="btn btn-success btn-lg btn-block">
+                {{ 'new.subscriber'|trans }}
+            </a>
+        </div>
+        <div class="email-list">
+            {#{{ dump(emails) }}#}
+            {% include 'AppBundle::parts/email_list.html.twig' %}
+        </div>
+    </div>
+{% endblock column_center %}

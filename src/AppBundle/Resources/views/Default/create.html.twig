@@ -1,0 +1,24 @@
+{% extends 'AppBundle::layout.html.twig' %}
+{% block column_center %}
+    <div class="col-sm-4 col-sm-offset-4">
+        <div class="panel content">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h1>{{ 'email.create.title'|trans }}</h1>
+                    {% for msg in app.session.flashBag.get('success') %}
+                        <div class="alert alert-success">
+                            {{ msg }}
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="panel-body">
+                    {{ form_start(subscribeForm, { 'attr': {'class': 'form-profile', 'novalidate': 'novalidate'}}) }}
+                    {{ form_end(subscribeForm) }}
+                </div>
+                <div class="panel-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock column_center %}
